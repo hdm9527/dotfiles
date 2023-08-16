@@ -1,0 +1,77 @@
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_status\
+$package\
+$golang\
+$java\
+$nodejs\
+$python\
+$rust\
+$time\
+\n$character"""
+
+[character]
+success_symbol = '[➜](bold green) '
+error_symbol = '[➜](bold red) '
+
+[directory]
+format = "[ $path ](fg:#e3b910)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙"
+"Downloads" = ""
+"Music" = ""
+"Pictures" = ""
+
+[git_branch]
+symbol = ""
+format = '[$symbol $branch ](fg:#769ff0)'
+
+[git_status]
+format = '[($all_status$ahead_behind )](fg:#769ff0)'
+
+[java]
+symbol = ""
+format = '[$symbol ($version) ](fg:#769ff0)'
+
+[nodejs]
+symbol = ""
+format = '[$symbol ($version) ](fg:#769ff0)'
+
+[package]
+symbol = ""
+format = 'via [$symbol $version ](208 bold)'
+
+[python]
+symbol = ""
+format = '[$symbol ($version) ](fg:#769ff0)'
+
+[rust]
+symbol = ""
+format = '[$symbol ($version) ](fg:#769ff0)'
+
+[golang]
+symbol = ""
+format = '[$symbol ($version) ](fg:#769ff0)'
+
+[hostname]
+ssh_only = false
+format = '[@](bold white) [$hostname](fg:#27ad5f) [in](bold white)'
+trim_at = '.companyname.com'
+disabled = false
+
+[time]
+disabled = false
+format = "[󱑒 $time ](fg:#a0a9cb)"
+
+[username]
+style_user = 'white bold'
+style_root = 'black bold'
+format = '[$user](fg:#16a085) '
+disabled = false
+show_always = true
