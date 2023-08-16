@@ -25,6 +25,7 @@ antigen apply
 export GO111MODULE=on
 export GOPROXY=https://goproxy.cn,direct
 
+# wsl2 dynamic set proxy
 export host_ip=$(ip route | grep default | awk '{print $3}')
 alias proxy="export http_proxy=http://$host_ip:7890;export https_proxy=http://$host_ip:7890"
 alias gitproxy="git config --global http.proxy \"socks5://$host_ip:7890\";git config --global https.proxy \"socks5://$host_ip:7890\""
